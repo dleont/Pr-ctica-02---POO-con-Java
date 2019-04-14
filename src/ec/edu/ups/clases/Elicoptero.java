@@ -7,11 +7,12 @@ package ec.edu.ups.clases;
 
 /**
  * Clase Elicoptero "hijo" hereda atributos y métodos de la clase Transporte
- * "abuelo" y de Aereo la clase "padre". Contiene métodos abstractos.
+ * "abuelo" y de Aereo la clase "padre". Contiene métodos abstractos. Se
+ * denomina como clase final.
  *
  * @author Darwin Leon, Est.
  */
-public class Elicoptero extends Aereo {
+public final class Elicoptero extends Aereo {
 
     private int cantCuchillas;
     private int cantRotor;

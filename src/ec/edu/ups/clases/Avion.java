@@ -8,10 +8,11 @@ package ec.edu.ups.clases;
 /**
  * Clase Avion "hijo" hereda atributos y métodos de la clase Transporte "abuelo"
  * y de Aereo la clase "padre". Contiene métodos abstractos.
+ * Se denomima clase final.
  *
  * @author Darwin Leon, Est.
  */
-public class Avion extends Aereo {
+public final class Avion extends Aereo {
 
     private double distanciaPista;
     private int cantAlas;

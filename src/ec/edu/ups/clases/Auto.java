@@ -7,10 +7,11 @@ package ec.edu.ups.clases;
 
 /**
  * Clase Auto "hijo" hereda valores de la clase Terrestre "padre".
+ * Se denomina clase final.
  *
  * @author Darwin Leon, Est.
  */
-public class Auto extends Terrestre {
+public final class Auto extends Terrestre {
 
    private String tipoCambio;
    private int cantCambio;
