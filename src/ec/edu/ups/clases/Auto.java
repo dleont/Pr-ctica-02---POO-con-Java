@@ -5,18 +5,20 @@
  */
 package ec.edu.ups.clases;
 
+import ec.edu.ups.interfaz.Interfaz;
+
 /**
- * Clase Auto "hijo" hereda valores de la clase Terrestre "padre".
- * Se denomina clase final.
+ * Clase Auto "hijo" hereda valores de la clase Terrestre "padre". Se denomina
+ * clase final. Se implementan métodos abstractos de la clase Interfaz.
  *
  * @author Darwin Leon, Est.
  */
-public final class Auto extends Terrestre {
+public final class Auto extends Terrestre implements Interfaz {
 
-   private String tipoCambio;
-   private int cantCambio;
-
-/**
+    private String tipoCambio;
+    private int cantCambio;
+    
+    /**
      * Método abstracto de la clase Terrestre
      */
     @Override
@@ -32,6 +34,7 @@ public final class Auto extends Terrestre {
 
     }
 
+    //Métodos setter's y getter's
     public String getTipoCambio() {
         return tipoCambio;
     }
@@ -48,10 +51,32 @@ public final class Auto extends Terrestre {
         this.cantCambio = cantCambio;
     }
 
+    /**
+     * Método toString convierte un objeto en una cadena de texto.
+     *
+     * @return valores heredados mediante "super.toString()" y proios de la
+     * clase Auto.
+     */
     @Override
     public String toString() {
-        return "Auto{" + super.toString()+"tipoCambio=" + tipoCambio + ", cantCambio=" + cantCambio + '}';
+        return "Auto{" + super.toString() + "tipoCambio=" + tipoCambio + ", cantCambio=" + cantCambio + '}';
     }
-    
-    
+
+    // 4 Métodos abstractos que se implementan de la clase Interfaz
+    @Override
+    public void transportar() {
+    }
+
+    @Override
+    public void arrancar() {
+    }
+
+    @Override
+    public void frenar() {
+    }
+
+    @Override
+    public void estacionar() {
+    }
+
 }

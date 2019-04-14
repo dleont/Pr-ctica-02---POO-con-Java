@@ -5,14 +5,17 @@
  */
 package ec.edu.ups.clases;
 
+import ec.edu.ups.interfaz.Interfaz;
+
 /**
  * Clase Elicoptero "hijo" hereda atributos y métodos de la clase Transporte
  * "abuelo" y de Aereo la clase "padre". Contiene métodos abstractos. Se
- * denomina como clase final.
+ * denomina como clase final. Se implementa métodos abstractos de la clase
+ * Interfaz.
  *
  * @author Darwin Leon, Est.
  */
-public final class Elicoptero extends Aereo {
+public final class Elicoptero extends Aereo implements Interfaz {
 
     private int cantCuchillas;
     private int cantRotor;
@@ -50,9 +53,31 @@ public final class Elicoptero extends Aereo {
         this.cantRotor = cantRotor;
     }
 
+    /**
+     * Método toString convierte un objeto en cadena de texto.
+     *
+     * @return valores de la clase Aereo con atributos de esta clase.
+     */
     @Override
     public String toString() {
         return "Elicoptero{" + super.toString() + "cantCuchillas=" + cantCuchillas + ", cantRotor=" + cantRotor + '}';
+    }
+
+    //Métodos implementados de la clase Interfaz
+    @Override
+    public void transportar() {
+    }
+
+    @Override
+    public void arrancar() {
+    }
+
+    @Override
+    public void frenar() {
+    }
+
+    @Override
+    public void estacionar() {
     }
 
 }

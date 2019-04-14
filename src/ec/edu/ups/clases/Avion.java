@@ -5,14 +5,16 @@
  */
 package ec.edu.ups.clases;
 
+import ec.edu.ups.interfaz.Interfaz;
+
 /**
  * Clase Avion "hijo" hereda atributos y métodos de la clase Transporte "abuelo"
- * y de Aereo la clase "padre". Contiene métodos abstractos.
- * Se denomima clase final.
+ * y de Aereo la clase "padre". Contiene métodos abstractos. Se denomima como
+ * clase final. Se implementa métodos abstractos de la clase Interfaz.
  *
  * @author Darwin Leon, Est.
  */
-public final class Avion extends Aereo {
+public final class Avion extends Aereo implements Interfaz {
 
     private double distanciaPista;
     private int cantAlas;
@@ -35,6 +37,7 @@ public final class Avion extends Aereo {
 
     }
 
+    //Mpetodos getter's y setter's
     public double getDistanciaPista() {
         return distanciaPista;
     }
@@ -67,9 +70,32 @@ public final class Avion extends Aereo {
         this.cantZonasCarga = cantZonasCarga;
     }
 
+    /**
+     * Método toString convierte un objeto en cadena de texto.
+     *
+     * @return Atributos de la clase Aereo mediante super.toString() y ademas
+     * valores de su propia clase.
+     */
     @Override
     public String toString() {
         return "Avion{" + super.toString() + "distanciaPista=" + distanciaPista + ", cantAlas=" + cantAlas + ", anchoFuselaje=" + anchoFuselaje + ", cantZonasCarga=" + cantZonasCarga + '}';
+    }
+
+    //Métodos abstrcatos implementados de la clase Interfaz
+    @Override
+    public void transportar() {
+    }
+
+    @Override
+    public void arrancar() {
+    }
+
+    @Override
+    public void frenar() {
+    }
+
+    @Override
+    public void estacionar() {
     }
 
 }
