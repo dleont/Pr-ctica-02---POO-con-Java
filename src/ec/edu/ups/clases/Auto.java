@@ -12,6 +12,22 @@ package ec.edu.ups.clases;
  */
 public class Auto extends Terrestre {
 
-   
+   private String tipoCambio;
+   private int cantCambio;
 
+/**
+     * Método abstracto de la clase Terrestre
+     */
+    @Override
+    public void calcularTiempoViaje() {
+
+    }
+
+    /**
+     * Método abstracto de la clase Transporte
+     */
+    @Override
+    public void calcularTamaño() {
+
+    }
 }

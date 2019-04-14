@@ -15,5 +15,57 @@ package ec.edu.ups.clases;
  */
 public abstract class Terrestre extends Transporte {
 
-   
+   //atributos propios de la clase Terrestre
+    private String tipoVia;
+    private String sistAlumbrado;
+    private int cantChoques;
+    
+    /**
+     * Metodo abstracto: solo se declara. Calcula tiempo de viaje mediante la
+     * velocidad máxima.
+     */
+    public abstract void calcularTiempoViaje();
+
+    /**
+     * Constructor espacial de la clase Terrestre tipo publico, no retorna
+     * ningun paramtro, con el nombre de la clase.
+     */
+    public Terrestre() {
+    }
+
+    /**
+     * Constructor con los atributos de la clase Terrestre.
+     *
+     * @param tipoVia
+     * @param sistAlumbrado
+     * @param cantChoques
+     */
+    public Terrestre(String tipoVia, String sistAlumbrado, int cantChoques) {
+        this.tipoVia = tipoVia;
+        this.sistAlumbrado = sistAlumbrado;
+        this.cantChoques = cantChoques;
+    }
+
+    /**
+     * Constructor con los atributos de la clase Terestre y ademas hereda de la
+     * clase Transporte.
+     *
+     * @param tipoVia
+     * @param sistAlumbrado
+     * @param cantChoques
+     * @param codigo
+     * @param nombre
+     * @param modelo
+     * @param marca
+     * @param color
+     * @param costo
+     * @param capacidad
+     * @param maximaVelocidad
+     */
+    public Terrestre(String tipoVia, String sistAlumbrado, int cantChoques, int codigo, String nombre, String modelo, String marca, String color, double costo, int capacidad, double maximaVelocidad) {
+        super(codigo, nombre, modelo, marca, color, costo, capacidad, maximaVelocidad);
+        this.tipoVia = tipoVia;
+        this.sistAlumbrado = sistAlumbrado;
+        this.cantChoques = cantChoques;
+    }
 }

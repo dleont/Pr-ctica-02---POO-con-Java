@@ -13,6 +13,23 @@ package ec.edu.ups.clases;
  */
 public class Tren extends Terrestre {
 
+private int cantVagones;
+private String tipoLocomotora;
 
+ /**
+     * Método abstracto de la clase Terrestre
+     */
+    @Override
+    public void calcularTiempoViaje() {
+
+    }
+
+    /**
+     * Método abstrcato de la clase Transporte
+     */
+    @Override
+    public void calcularTamaño() {
+
+    }
 
 }

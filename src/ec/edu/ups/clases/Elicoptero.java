@@ -13,6 +13,24 @@ package ec.edu.ups.clases;
  */
 public class Elicoptero extends Aereo {
 
+    private int cantCuchillas;
+    private int cantRotor;
     
+    /**
+     * Método abstracto heredado de la clase Aereo.
+     */
+    @Override
+    public void calcularCategoriaVuelo() {
+
+    }
+
+    /**
+     * Método abstracto heredado de la clase Transporte.
+     *
+     */
+    @Override
+    public void calcularTamaño() {
+
+    }
 
 }

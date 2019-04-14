@@ -13,6 +13,25 @@ package ec.edu.ups.clases;
  */
 public class Avion extends Aereo {
 
+   private double distanciaPista;
+   private int cantAlas;
+   private double anchoFuselaje;
+   private int cantZonasCarga;
    
+   /**
+     * Método abstracto heredado de la clase Aereo.
+     */
+    @Override
+    public void calcularCategoriaVuelo() {
+
+    }
+
+    /**
+     * Método abstracto heredado de la clase Transporte.
+     */
+    @Override
+    public void calcularTamaño() {
+
+    }
 
 }
