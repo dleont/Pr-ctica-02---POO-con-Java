@@ -14,7 +14,7 @@ package ec.edu.ups.clases;
  */
 public abstract class Transporte {
 
-   //atributos de tipo privado de la clase Transporte
+    //atributos de tipo privado de la clase Transporte
     private int codigo;
     private String nombre;
     private String modelo;
@@ -71,11 +71,89 @@ public abstract class Transporte {
         this.capacidad = capacidad;
         this.maximaVelocidad = maximaVelocidad;
     }
-    
+
     /**
      * Método abstracto: calcula el tamaño del transporte mediante la cantidad
      * de pasajeros "capacidad".
      */
     public abstract void calcularTamaño();
+
+    //metodos getter's y setter's
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public double getCosto() {
+        return costo;
+    }
+
+    public void setCosto(double costo) {
+        this.costo = costo;
+    }
+
+    public int getCapacidad() {
+        return capacidad;
+    }
+
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
+    }
+
+    public double getMaximaVelocidad() {
+        return maximaVelocidad;
+    }
+
+    public void setMaximaVelocidad(double maximaVelocidad) {
+        this.maximaVelocidad = maximaVelocidad;
+    }
+
+    /**
+     * metodo to String convierte un objeto en cadena de texto.
+     *
+     * @return valores de la clase Transporte
+     */
+    @Override
+    public String toString() {
+        return "Transporte{" + "Código= " + codigo + ", Nombre= " + nombre
+                + ", Modelo= " + modelo + ", Marca= " + marca + ", Color= " + color
+                + ", Costo= " + costo + ", Capacidad de personas= " + capacidad
+                + ", Máxima Velocidad= " + maximaVelocidad + '}';
+    }
 
 }

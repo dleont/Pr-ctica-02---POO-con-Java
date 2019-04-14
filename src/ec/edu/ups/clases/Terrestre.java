@@ -15,11 +15,11 @@ package ec.edu.ups.clases;
  */
 public abstract class Terrestre extends Transporte {
 
-   //atributos propios de la clase Terrestre
+    //atributos propios de la clase Terrestre
     private String tipoVia;
     private String sistAlumbrado;
     private int cantChoques;
-    
+
     /**
      * Metodo abstracto: solo se declara. Calcula tiempo de viaje mediante la
      * velocidad máxima.
@@ -68,4 +68,41 @@ public abstract class Terrestre extends Transporte {
         this.sistAlumbrado = sistAlumbrado;
         this.cantChoques = cantChoques;
     }
+
+    //metodos setter's y getter's
+    public String getTipoVia() {
+        return tipoVia;
+    }
+
+    public void setTipoVia(String tipoVia) {
+        this.tipoVia = tipoVia;
+    }
+
+    public String getSistAlumbrado() {
+        return sistAlumbrado;
+    }
+
+    public void setSistAlumbrado(String sistAlumbrado) {
+        this.sistAlumbrado = sistAlumbrado;
+    }
+
+    public int getCantChoques() {
+        return cantChoques;
+    }
+
+    public void setCantChoques(int cantChoques) {
+        this.cantChoques = cantChoques;
+    }
+
+    /**
+     * Metodo to String convierte un objeto en cadena de texto.
+     *
+     * @return metodo to String (super.toString())de la clase Transporte y
+     * ademas con valores de la clase Terrestre.
+     */
+    @Override
+    public String toString() {
+        return "Terrestre{" + super.toString() + "Tipo de Via= " + tipoVia + ", Sistema de tAlumbrado= " + sistAlumbrado + ", Cantidad de Choques= " + cantChoques + '}';
+    }
+
 }

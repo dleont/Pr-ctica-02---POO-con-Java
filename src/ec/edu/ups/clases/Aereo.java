@@ -6,22 +6,21 @@
 package ec.edu.ups.clases;
 
 /**
- * Clase Aereo "padre" de tipo abstracta que hereda atributos de la clase 
- * Transporte "abuelo".
- * Clase de tipo abstracta, con un método abstracto; además cuenta con atributos
- * proios de la clase.
+ * Clase Aereo "padre" de tipo abstracta que hereda atributos de la clase
+ * Transporte "abuelo". Clase de tipo abstracta, con un método abstracto; además
+ * cuenta con atributos proios de la clase.
  *
  * @author Darwin Leon, Est.
  */
 public abstract class Aereo extends Transporte {
-    
+
     //Atributos de la clase Aereo
     private String tipoTransporte;
     private double costoVuelo;
     private double alturaVuelo;
     private String formaDespegar;
     private String formaAterrizar;
-    
+
     /**
      * Método abstracto: solo se declara el cual pertenece a la clase Aereo.
      * Calcula la categoria del vuelo(1clase/2clase) mediante el costo del
@@ -80,7 +79,58 @@ public abstract class Aereo extends Transporte {
         this.formaAterrizar = formaAterrizar;
     }
 
+    //Métodos setter's y getter's
+    public String getTipoTransporte() {
+        return tipoTransporte;
+    }
 
-    
+    public void setTipoTransporte(String tipoTransporte) {
+        this.tipoTransporte = tipoTransporte;
+    }
+
+    public double getCostoVuelo() {
+        return costoVuelo;
+    }
+
+    public void setCostoVuelo(double costoVuelo) {
+        this.costoVuelo = costoVuelo;
+    }
+
+    public double getAlturaVuelo() {
+        return alturaVuelo;
+    }
+
+    public void setAlturaVuelo(double alturaVuelo) {
+        this.alturaVuelo = alturaVuelo;
+    }
+
+    public String getFormaDespegar() {
+        return formaDespegar;
+    }
+
+    public void setFormaDespegar(String formaDespegar) {
+        this.formaDespegar = formaDespegar;
+    }
+
+    public String getFormaAterrizar() {
+        return formaAterrizar;
+    }
+
+    public void setFormaAterrizar(String formaAterrizar) {
+        this.formaAterrizar = formaAterrizar;
+    }
+
+    /**
+     * Método to String convierte un objeto en una cadena de texto.
+     *
+     * @return método toString de la clase "ABUELO" (super.toString()) y además
+     * con valores de esta clase.
+     */
+    @Override
+    public String toString() {
+        return "Aereo{ " + super.toString() + "Tipo de Transporte= " + tipoTransporte
+                + ", Costo del Vuelo= " + costoVuelo + ", Altura de Vuelo= " + alturaVuelo
+                + ", Forma de Despegar= " + formaDespegar + ", Forma  de Aterrizar= " + formaAterrizar + '}';
+    }
 
 }

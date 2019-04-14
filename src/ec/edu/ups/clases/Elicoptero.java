@@ -15,7 +15,7 @@ public class Elicoptero extends Aereo {
 
     private int cantCuchillas;
     private int cantRotor;
-    
+
     /**
      * Método abstracto heredado de la clase Aereo.
      */
@@ -31,6 +31,27 @@ public class Elicoptero extends Aereo {
     @Override
     public void calcularTamaño() {
 
+    }
+
+    public int getCantCuchillas() {
+        return cantCuchillas;
+    }
+
+    public void setCantCuchillas(int cantCuchillas) {
+        this.cantCuchillas = cantCuchillas;
+    }
+
+    public int getCantRotor() {
+        return cantRotor;
+    }
+
+    public void setCantRotor(int cantRotor) {
+        this.cantRotor = cantRotor;
+    }
+
+    @Override
+    public String toString() {
+        return "Elicoptero{" + super.toString() + "cantCuchillas=" + cantCuchillas + ", cantRotor=" + cantRotor + '}';
     }
 
 }

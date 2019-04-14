@@ -13,12 +13,12 @@ package ec.edu.ups.clases;
  */
 public class Avion extends Aereo {
 
-   private double distanciaPista;
-   private int cantAlas;
-   private double anchoFuselaje;
-   private int cantZonasCarga;
-   
-   /**
+    private double distanciaPista;
+    private int cantAlas;
+    private double anchoFuselaje;
+    private int cantZonasCarga;
+
+    /**
      * Método abstracto heredado de la clase Aereo.
      */
     @Override
@@ -32,6 +32,43 @@ public class Avion extends Aereo {
     @Override
     public void calcularTamaño() {
 
+    }
+
+    public double getDistanciaPista() {
+        return distanciaPista;
+    }
+
+    public void setDistanciaPista(double distanciaPista) {
+        this.distanciaPista = distanciaPista;
+    }
+
+    public int getCantAlas() {
+        return cantAlas;
+    }
+
+    public void setCantAlas(int cantAlas) {
+        this.cantAlas = cantAlas;
+    }
+
+    public double getAnchoFuselaje() {
+        return anchoFuselaje;
+    }
+
+    public void setAnchoFuselaje(double anchoFuselaje) {
+        this.anchoFuselaje = anchoFuselaje;
+    }
+
+    public int getCantZonasCarga() {
+        return cantZonasCarga;
+    }
+
+    public void setCantZonasCarga(int cantZonasCarga) {
+        this.cantZonasCarga = cantZonasCarga;
+    }
+
+    @Override
+    public String toString() {
+        return "Avion{" + super.toString() + "distanciaPista=" + distanciaPista + ", cantAlas=" + cantAlas + ", anchoFuselaje=" + anchoFuselaje + ", cantZonasCarga=" + cantZonasCarga + '}';
     }
 
 }

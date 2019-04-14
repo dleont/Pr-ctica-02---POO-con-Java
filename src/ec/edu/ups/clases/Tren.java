@@ -13,10 +13,10 @@ package ec.edu.ups.clases;
  */
 public class Tren extends Terrestre {
 
-private int cantVagones;
-private String tipoLocomotora;
+    private int cantVagones;
+    private String tipoLocomotora;
 
- /**
+    /**
      * Método abstracto de la clase Terrestre
      */
     @Override
@@ -30,6 +30,27 @@ private String tipoLocomotora;
     @Override
     public void calcularTamaño() {
 
+    }
+
+    public int getCantVagones() {
+        return cantVagones;
+    }
+
+    public void setCantVagones(int cantVagones) {
+        this.cantVagones = cantVagones;
+    }
+
+    public String getTipoLocomotora() {
+        return tipoLocomotora;
+    }
+
+    public void setTipoLocomotora(String tipoLocomotora) {
+        this.tipoLocomotora = tipoLocomotora;
+    }
+
+    @Override
+    public String toString() {
+        return "Tren{" + super.toString() + "cantVagones=" + cantVagones + ", tipoLocomotora=" + tipoLocomotora + '}';
     }
 
 }

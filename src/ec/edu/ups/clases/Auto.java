@@ -30,4 +30,27 @@ public class Auto extends Terrestre {
     public void calcularTamaño() {
 
     }
+
+    public String getTipoCambio() {
+        return tipoCambio;
+    }
+
+    public void setTipoCambio(String tipoCambio) {
+        this.tipoCambio = tipoCambio;
+    }
+
+    public int getCantCambio() {
+        return cantCambio;
+    }
+
+    public void setCantCambio(int cantCambio) {
+        this.cantCambio = cantCambio;
+    }
+
+    @Override
+    public String toString() {
+        return "Auto{" + super.toString()+"tipoCambio=" + tipoCambio + ", cantCambio=" + cantCambio + '}';
+    }
+    
+    
 }
