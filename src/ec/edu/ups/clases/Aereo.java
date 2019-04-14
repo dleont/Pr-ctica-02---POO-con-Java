@@ -6,9 +6,15 @@
 package ec.edu.ups.clases;
 
 /**
+ * Clase Aereo "padre" de tipo abstracta que hereda atributos de la clase 
+ * Transporte "abuelo".
+ * Clase de tipo abstracta, con un método abstracto; además cuenta con atributos
+ * proios de la clase.
  *
- * @author Darwin
+ * @author Darwin Leon, Est.
  */
-public class Aereo {
+public abstract class Aereo extends Transporte {
+
     
+
 }

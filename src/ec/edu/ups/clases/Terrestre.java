@@ -6,9 +6,14 @@
 package ec.edu.ups.clases;
 
 /**
+ * Clase Terrestre "padre" de tipo abstracta que hereda todos los atributos de
+ * la clase Transporte "abuelo" y ademas contine sus propias atributos. Se
+ * implementa herencia en esta clase. Contiene un metodo abstracto el cual solo
+ * se declara.
  *
- * @author Darwin
+ * @author Darwin Leon, Est.
  */
-public class Terrestre {
-    
+public abstract class Terrestre extends Transporte {
+
+   
 }

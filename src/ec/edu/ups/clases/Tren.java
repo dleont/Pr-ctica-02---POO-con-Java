@@ -6,9 +6,13 @@
 package ec.edu.ups.clases;
 
 /**
+ * Clase Tren "hijo" hereda atributos y metodos de la clase Transporte "abuelo"
+ * y de la clase Terrestre "padre".
  *
- * @author Darwin
+ * @author Darwin Leon, Est.
  */
-public class Tren {
-    
+public class Tren extends Terrestre {
+
+
+
 }

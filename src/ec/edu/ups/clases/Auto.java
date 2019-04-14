@@ -6,9 +6,12 @@
 package ec.edu.ups.clases;
 
 /**
+ * Clase Auto "hijo" hereda valores de la clase Terrestre "padre".
  *
- * @author Darwin
+ * @author Darwin Leon, Est.
  */
-public class Auto {
-    
+public class Auto extends Terrestre {
+
+   
+
 }

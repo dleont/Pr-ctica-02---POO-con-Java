@@ -6,13 +6,14 @@
 package ec.edu.ups.clases;
 
 /**
- * Clase "abuelo" donde van la mayoria de atributos que serán heredados Metodos
- * setters y getters
+ * Clase Transporte "abuelo" de tipo abstracta donde van la mayoria de atributos
+ * que serán heredados. Metodos setters y getters y tres tipos de constructores.
+ * Método abstracto.
  *
  * @author Darwin Leon, Est.
  */
-public class Transporte {
+public abstract class Transporte {
 
-    
+   
 
 }
