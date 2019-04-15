@@ -33,8 +33,8 @@ public final class Avion extends Aereo implements Interfaz {
      * Método abstracto heredado de la clase Transporte.
      */
     @Override
-    public void calcularTamaño() {
-
+    public double calcularTamaño() {
+        return 0;
     }
 
     //Mpetodos getter's y setter's
@@ -78,7 +78,9 @@ public final class Avion extends Aereo implements Interfaz {
      */
     @Override
     public String toString() {
-        return "Avion{" + super.toString() + "distanciaPista=" + distanciaPista + ", cantAlas=" + cantAlas + ", anchoFuselaje=" + anchoFuselaje + ", cantZonasCarga=" + cantZonasCarga + '}';
+        return "Avion{" + super.toString() + "Distancia de Pista= " + distanciaPista
+                + ", Cantidad de Alas= " + cantAlas + ", Ancho del Fuselaje=" + anchoFuselaje
+                + ", Cantidad Zonas de Carga= " + cantZonasCarga + '}';
     }
 
     //Métodos abstrcatos implementados de la clase Interfaz

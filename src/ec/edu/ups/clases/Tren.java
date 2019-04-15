@@ -19,20 +19,38 @@ public final class Tren extends Terrestre implements Interfaz {
     private int cantVagones;
     private String tipoLocomotora;
 
+    public Tren() {    
+    }
+
+    public Tren(int cantVagones, String tipoLocomotora, String tipoVia, String sistAlumbrado, int cantChoques, int codigo, String nombre, String modelo, String marca, String color, double costo, int capacidad, double maximaVelocidad) {
+        super(tipoVia, sistAlumbrado, cantChoques, codigo, nombre, modelo, marca, color, costo, capacidad, maximaVelocidad);
+        this.cantVagones = cantVagones;
+        this.tipoLocomotora = tipoLocomotora;
+    }
+    
+    
     /**
      * Método abstracto de la clase Terrestre
      */
     @Override
-    public void calcularTiempoViaje() {
-
+    public double calcularTiempoViaje() {
+        int distanciaQuito = 850;
+        double tiempoViaje;
+        int velocidad = (int) super.getMaximaVelocidad();
+        if (velocidad <= 160) {
+            tiempoViaje = distanciaQuito / velocidad;
+        } else {
+            tiempoViaje = distanciaQuito / velocidad;
+        }
+        return tiempoViaje;
     }
 
     /**
      * Método abstrcato de la clase Transporte
      */
     @Override
-    public void calcularTamaño() {
-
+    public double calcularTamaño() {
+        return 0;
     }
 
     //Métodos getter's y setter's
@@ -52,7 +70,29 @@ public final class Tren extends Terrestre implements Interfaz {
         this.tipoLocomotora = tipoLocomotora;
     }
 
-    /**
+   
+    // Métodos abstractos que fueron implementados de la clase Interfaz.
+    @Override
+    public void transportar() {
+        System.out.println(" El "+super.getNombre()+" transporta alrededor de "+super.getCapacidad()+" pasajeros en cada viaje");
+    }
+
+    @Override
+    public void arrancar() {
+        System.out.println(" El tren de "+super.getMarca()+" arranca mucho mas rapido");
+    }
+
+    @Override
+    public void frenar() {
+        System.out.println(" El tren modelo "+super.getModelo()+" frena en 5 segundos ");
+    }
+
+    @Override
+    public void estacionar() {
+        System.out.println(" El tren "+ super.getSistAlumbrado()+ " es muy facil de estacionar");
+    }
+    
+     /**
      * Método toString convierte un objeto en cadena de texto.
      *
      * @return atributos de la clase Terrestre en el método super.toString() y
@@ -60,24 +100,10 @@ public final class Tren extends Terrestre implements Interfaz {
      */
     @Override
     public String toString() {
-        return "Tren{" + super.toString() + "cantVagones=" + cantVagones + ", tipoLocomotora=" + tipoLocomotora + '}';
-    }
-
-    // Métodos abstractos que fueron implementados de la clase Interfaz.
-    @Override
-    public void transportar() {
-    }
-
-    @Override
-    public void arrancar() {
-    }
-
-    @Override
-    public void frenar() {
-    }
-
-    @Override
-    public void estacionar() {
+        return  super.toString() + " Cantidad de vagones= " + cantVagones + 
+                ", Tipode locomotora= " + tipoLocomotora + " Con todas estas "
+                + "caracteristicas se estima"+"\n"+ "el arribo a Quito "
+                + "en " + this.calcularTiempoViaje() + " horas"+"\n";
     }
 
 }

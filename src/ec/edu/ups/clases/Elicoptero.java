@@ -33,7 +33,8 @@ public final class Elicoptero extends Aereo implements Interfaz {
      *
      */
     @Override
-    public void calcularTamaño() {
+    public double calcularTamaño() {
+        return 0;
 
     }
 

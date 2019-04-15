@@ -15,23 +15,42 @@ import ec.edu.ups.interfaz.Interfaz;
  */
 public final class Auto extends Terrestre implements Interfaz {
 
+    //atributos de la clase Auto
     private String tipoCambio;
     private int cantCambio;
-    
+
+    public Auto() {
+    }
+
+    public Auto(String tipoCambio, int cantCambio, String tipoVia, String sistAlumbrado, int cantChoques, int codigo, String nombre, String modelo, String marca, String color, double costo, int capacidad, double maximaVelocidad) {
+        super(tipoVia, sistAlumbrado, cantChoques, codigo, nombre, modelo, marca, color, costo, capacidad, maximaVelocidad);
+        this.tipoCambio = tipoCambio;
+        this.cantCambio = cantCambio;
+    }
+
     /**
      * Método abstracto de la clase Terrestre
      */
     @Override
-    public void calcularTiempoViaje() {
-
+    public double calcularTiempoViaje() {
+        int distanciaQuito = 850;
+        double tiempoViaje;
+        int velocidad = (int) super.getMaximaVelocidad();
+        if (velocidad <= 120) {
+            tiempoViaje = distanciaQuito / velocidad;
+        } else {
+            tiempoViaje = distanciaQuito / velocidad;
+        }
+        return tiempoViaje;
     }
 
     /**
      * Método abstracto de la clase Transporte
      */
     @Override
-    public void calcularTamaño() {
-
+    public double calcularTamaño() {
+        return 0;
+        
     }
 
     //Métodos setter's y getter's
@@ -51,6 +70,27 @@ public final class Auto extends Terrestre implements Interfaz {
         this.cantCambio = cantCambio;
     }
 
+    // 4 Métodos abstractos que se implementan de la clase Interfaz
+    @Override
+    public void transportar() {
+        System.out.println("El auto "+ super.getNombre()+ " transporta "+ super.getCapacidad()+ " pasajeros");
+    }
+
+    @Override
+    public void arrancar() {
+        System.out.println("El auto "+ super.getNombre()+ "del modelo "+super.getModelo()+" puede arrancar cuesta arriba");
+    }
+
+    @Override
+    public void frenar() {
+        System.out.println("El auto "+ super.getNombre()+ " de cambios "+this.getTipoCambio()+" frena a rraya ");
+    }
+
+    @Override
+    public void estacionar() {
+        System.out.println("El auto "+super.getColor()+ " esta mal estacionado");
+    }
+
     /**
      * Método toString convierte un objeto en una cadena de texto.
      *
@@ -59,24 +99,10 @@ public final class Auto extends Terrestre implements Interfaz {
      */
     @Override
     public String toString() {
-        return "Auto{" + super.toString() + "tipoCambio=" + tipoCambio + ", cantCambio=" + cantCambio + '}';
-    }
-
-    // 4 Métodos abstractos que se implementan de la clase Interfaz
-    @Override
-    public void transportar() {
-    }
-
-    @Override
-    public void arrancar() {
-    }
-
-    @Override
-    public void frenar() {
-    }
-
-    @Override
-    public void estacionar() {
+        return super.toString() + " Tipo de Cambio = " + tipoCambio
+                + ", Cantidad de Cambios= " + cantCambio + " Con todas estas "
+                + "caracteristicas se estima"+"\n"+ "el arribo a Quito "
+                + "en " + this.calcularTiempoViaje() + " horas"+"\n";
     }
 
 }

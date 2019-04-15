@@ -76,7 +76,7 @@ public abstract class Transporte {
      * Método abstracto: calcula el tamaño del transporte mediante la cantidad
      * de pasajeros "capacidad".
      */
-    public abstract void calcularTamaño();
+    public abstract double calcularTamaño();
 
     //metodos getter's y setter's
     public int getCodigo() {
@@ -150,10 +150,10 @@ public abstract class Transporte {
      */
     @Override
     public String toString() {
-        return "Transporte{" + "Código= " + codigo + ", Nombre= " + nombre
+        return  " Código= " + codigo + ", Nombre= " + nombre
                 + ", Modelo= " + modelo + ", Marca= " + marca + ", Color= " + color
-                + ", Costo= " + costo + ", Capacidad de personas= " + capacidad
-                + ", Máxima Velocidad= " + maximaVelocidad + '}';
+                + ", Costo= " + costo +"\n"+ " Capacidad de personas= " + capacidad
+                + ", Máxima Velocidad= " + maximaVelocidad ;
     }
 
 }

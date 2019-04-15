@@ -21,10 +21,10 @@ public abstract class Terrestre extends Transporte {
     private int cantChoques;
 
     /**
-     * Metodo abstracto: solo se declara. Calcula tiempo de viaje mediante la
-     * velocidad máxima.
+     * Metodo abstracto de la clase Terrestre: solo se declara. Calcula tiempo
+     * de viaje mediante la velocidad máxima.
      */
-    public abstract void calcularTiempoViaje();
+    public abstract double calcularTiempoViaje();
 
     /**
      * Constructor espacial de la clase Terrestre tipo publico, no retorna
@@ -102,7 +102,9 @@ public abstract class Terrestre extends Transporte {
      */
     @Override
     public String toString() {
-        return "Terrestre{" + super.toString() + "Tipo de Via= " + tipoVia + ", Sistema de tAlumbrado= " + sistAlumbrado + ", Cantidad de Choques= " + cantChoques + '}';
+        return " Terrestre{" + super.toString() + " Para Tipo de Via= " + tipoVia
+                + ", Sistema de Alumbrado= " + sistAlumbrado + "\n"
+                + " Cantidad de Choques= " + cantChoques;
     }
 
 }
