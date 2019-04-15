@@ -51,7 +51,7 @@ public class Principal {
         trenVala.estacionar();
         System.out.println("\n");
 
-        Tren trenEcu = new Tren(12, "petroleo", "rieles", "electrico", 0, 04, "Tren Ecuador", " 1964", "Ecuador", "rojo", 90000, 80, 140);
+        Tren trenEcu = new Tren(12, "petroleo", "rieles", "electrico", 0, 04, "Tren Ecuador", " 1964", "Ecuador", "rojo", 900000, 80, 140);
         double tiempoTrenEcu = trenEcu.calcularTiempoViaje();
         System.out.println(" Tiempo de llegada con un transporte: " + "\n" + trenEcu.toString());
         trenEcu.arrancar();
@@ -64,11 +64,23 @@ public class Principal {
         lista.add(autoPichirilo);
         lista.add(trenVala);
         lista.add(trenEcu);
-        
-        
+
         System.out.println(" ");
-        //lista.add(empleadoJuanito);
-        //lista.add(empleadaMaria);
+
+        Terrestre terreAnonimo = new Terrestre("Rieles", "electrico", 4) {
+            @Override
+            public double calcularTiempoViaje() {
+                return this.getCapacidad();
+            }
+
+            @Override
+            public double calcularTamaño() {
+                return 0;
+            }
+        };
+        System.out.println(" ");
+        System.out.println("Transporte Anonimo");
+        System.out.println(terreAnonimo);
 
     }
 
